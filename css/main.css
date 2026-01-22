@@ -1,0 +1,17 @@
+body {
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #00ff26;
+}
+div {
+    background-color: #efd964;
+    color: #ff0000;
+    font-size: 12px;
+    font-family: Bitcount Grid Single;
+}
+.MA {
+    background-color: #0000ff;
+}
+#john {
+    color: #ffffff;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0px;
+        }
+        .Box {
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: #0e6c8d;
+            /*margin: 5px;*/
+            margin: 2px;
+            padding: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            float: left;
+        }
+        #box3 {
+            overflow: hidden;
+        }
+        #box4 {
+            overflow: hidden;
+        }
+    </style>
+    <script>
+
+        // alert("hello");
+
+        // variables
+        var name = "John";
+
+        // DOM Document Object Model
+
+        // OOPs
+
+
+
+        // methods...
+        // document.getElementById("box2").play();
+        //
+
+        // event system
+
+
+        function init() {
+
+            // changing a attribute of an element....
+            document.getElementById("box2").innerHTML = "Hello " + name;
+        }
+
+    </script>
+</head>
+<body onload="init();">
+    <div class="Box" id="box1">
+        Hello
+    </div>
+    <div class="Box" id="box2">
+        Goodbye
+    </div>
+    <div class="Box" id="box3">
+        <img src="images/phoebe.jpg">
+    </div>
+    <div class="Box" id="box4">
+        <img src="images/phoebe.jpg">
+    </div>
+
+
+
+
+
+<!--    Second page-->
+<!--    <a href="index.html">Home</a>-->
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Title</title>
+
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+        canvas {
+            background-color: cornflowerblue;
+        }
+        #holder {
+            background-color: gray;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #holder_canvas {
+            background-color: darkgray;
+            padding: 10px;
+            margin-bottom: 10px;
+            display: none;
+        }
+        #play_button {
+            width: 120px;
+            height: 140px;
+            background-color: red;
+            display: none;
+        }
+        #pause_button {
+            width: 120px;
+            height: 140px;
+            background-color: goldenrod;
+            display: none;
+        }
+    </style>
+
+    <script>
+
+        function init() {
+
+            // var canvas_one = document.getElementById("canvas_one");
+            // var context_one = canvas_one.getContext("2d");
+            //
+            // var canvas_two = document.getElementById("canvas_two");
+            // var context_two = canvas_two.getContext("2d");
+            //
+            // // draw one image to one canvas
+            // context_one.drawImage(document.getElementById("phoebe"), 0, 0,320 ,240);
+            //
+            // // draw parts of an image to the canvas
+            // var section_one = context_one.getImageData(0,0,100,100);
+            // context_two.putImageData(section_one, 100, 100);
+
+
+            // random time loops
+            // var timer = setInterval(function() {
+            //
+            // }, 1000);
+
+
+            // video drawing
+
+            // const video = document.getElementById('video_one');
+            // const context_three = document.getElementById('canvas_three');
+            // const ctx = context_three.getContext('2d');
+            //
+            // // Ensure video is loaded before processing
+            // video.addEventListener('play', function() {
+            //     // context_three.width = video.videoWidth;
+            //     // context_three.height = video.videoHeight;
+            //     drawFrame();
+            // });
+            //
+            // function drawFrame() {
+            //     if (video.paused || video.ended) return;
+            //
+            //     // Draw current video frame to canvas
+            //     ctx.drawImage(video, 0, 0, context_three.width, context_three.height);
+            //
+            //     // Get pixel data
+            //     const frame = ctx.getImageData(0, 0, context_three.width, context_three.height);
+            //     const data = frame.data; // [R, G, B, A, R, G, B, A, ...]
+            //
+            //     // Loop through pixels and keep only red channel
+            //     for (let i = 0; i < data.length; i += 4) {
+            //         const red = data[i];     // R
+            //         data[i] = red;           // Keep red
+            //         data[i + 1] = 0;         // Remove green
+            //         data[i + 2] = 0;         // Remove blue
+            //         // Alpha (data[i+3]) stays unchanged
+            //     }
+            //
+            //     // Put modified pixels back
+            //     ctx.putImageData(frame, 0, 0);
+            //
+            //     // Schedule next frame
+            //     requestAnimationFrame(drawFrame);
+            //
+            // }
+
+
+
+            // loading an image and randomiser
+
+            // var image_one = new Image();
+            // image_one.src = "images/phoebe_computer.jpg";
+            //
+            // image_one.onload = function () {
+            //
+            //     for (var i = 0; i < 1000; i++) {
+            //         var random_number_x = Math.floor(Math.random() * 320);
+            //         var random_number_y = Math.floor(Math.random() * 240);
+            //         context.drawImage(image_one, random_number_x, random_number_y ,100 , 100);
+            //     }
+            //
+            // }
+
+            document.getElementById("play_button").onclick = function() {
+                document.getElementById("video_one").play();
+            }
+
+            document.getElementById("pause_button").onclick = function() {
+                document.getElementById("video_one").pause();
+            }
+        }
+
+    </script>
+</head>
+<body onload="init();">
+    <div id="holder">
+        <img src="images/phoebe.jpg" width="320px" height="240px" id="phoebe">
+        <video width="320px" height="240px" id="video_one" loop>
+            <source src="videos/Movie.1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div id="holder_canvas">
+        <canvas id="canvas_one" width="320px" height="240px"></canvas>
+        <canvas id="canvas_two" width="320px" height="240px"></canvas>
+        <canvas id="canvas_three" width="320px" height="240px"></canvas>
+
+        <div id="play_button">
+
+        </div>
+        <div id="pause_button">
+
+        </div>
+    </div>
+
+</body>
+</html>
